@@ -23,31 +23,32 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
-setup(name="isomer-transcript",
-      version="0.0.1",
-      description="isomer-transcript",
-      author="Isomer Community",
-      author_email="riot@c-base.org",
-      url="https://github.com/isomeric/isomer-transcript",
-      license="GNU Affero General Public License v3",
-      packages=find_packages(),
-      long_description="""Isomer - Transcript
-==================
+setup(
+    name="isomer-transcript",
+    version="0.0.1",
+    description="isomer-transcript",
+    author="Isomer Community",
+    author_email="riot@c-base.org",
+    url="https://github.com/isomeric/isomer-transcript",
+    license="GNU Affero General Public License v3",
+    packages=find_packages(),
+    long_description="""Isomer - Transcript
+===================
 
-A transcript frontend to visualize data.
+Transcript frontend to visualize transcribed data.
 
 This software package is a plugin module for Isomer.
 """,
-      dependency_links=[
-      ],
-      install_requires=[
-          'isomer>=1.0.0',
-      ],
-      entry_points="""[isomer.components]
+    dependency_links=[
+    ],
+    install_requires=[
+        'isomer>=1.0.0',
+    ],
+    entry_points="""[isomer.components]
     transcriptmanager=isomer.transcript.transcriptmanager:TranscriptManager
     [isomer.schemata]
     transcript=isomer.transcript.transcript:Transcript
     decision=isomer.transcript.decision:Decision
     """,
-      test_suite="tests.main.main",
-      )
+    test_suite="tests.main.main",
+)
