@@ -27,7 +27,7 @@ import './transcript/transcriptmanagement.scss';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import { routing } from './transcript.config.js';
+import {routing} from './transcript.config.js';
 
 import rostercomponent from './transcript/roster';
 import template from './transcript/roster.tpl.html';
