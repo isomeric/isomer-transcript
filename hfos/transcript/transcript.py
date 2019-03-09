@@ -3,7 +3,7 @@
 
 # Isomer Application Framework
 # ============================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -38,14 +38,20 @@ from isomer.schemata.base import base_object
 TranscriptSchema = base_object('transcript')
 
 TranscriptSchema['properties'].update({
-    'locked': {'type': 'boolean', 'title': 'Locked Transcript',
-               'description': 'Determines whether the Transcript should '
-                              'be locked against changes.'},
-    'description': {'type': 'string', 'format': 'html',
-                    'title': 'Transcript description',
-                    'description': 'Transcript description'},
-    'content': {'type': 'string', 'format': 'html', 'title': 'Transcript content',
-                'description': 'Content'},
+    'locked': {
+        'type': 'boolean', 'title': 'Locked Transcript',
+        'description': 'Determines whether the Transcript should '
+                       'be locked against changes.'
+    },
+    'description': {
+        'type': 'string', 'format': 'html',
+        'title': 'Transcript description',
+        'description': 'Transcript description'
+    },
+    'content': {
+        'type': 'string', 'format': 'html', 'title': 'Transcript content',
+        'description': 'Content'
+    },
 })
 
 TranscriptForm = [
